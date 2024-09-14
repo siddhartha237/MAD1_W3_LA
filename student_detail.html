@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <table border="1">
+        <tr>
+            <th>Student ID</th>
+            <th>Course ID</th>
+            <th>Marks</th>
+        </tr>
+        {% for data in list %}
+        <tr>
+            <td>{{ data[0] }}</td>
+            <td>{{ data[1] }}</td>
+            <td>{{ data[2] }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="2" style="text-align: center;">Total Marks</td>
+            <td>{{ total }}</td>
+        </tr>
+    </table>
+</body>
+</html>
